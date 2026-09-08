@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>東京 ⟡ 大阪 ⟡ 京都 — Japan 2026</title>
+<title>Japan Trip — April 2027</title>
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icon-192.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -776,7 +776,7 @@ button:active, .map-link:active, .jump-pill:active, a.b-cal:active{
     <div class="kicker">The Lads Takeover <b>Japan</b> · Shared Trip App</div>
     <h1 class="title display">東京<span class="dot">・</span>大阪<span class="dot">・</span>京都</h1>
     <div class="dates-row">
-      <div><span class="lbl">TRIP</span>Nov 27 – Dec 8, 2026</div>
+      <div><span class="lbl">TRIP</span>Apr 16–24, 2027</div>
       <div><span class="lbl">RAIL PASS</span>7-day JR Pass</div>
     </div>
   </div>
@@ -1236,6 +1236,7 @@ function photoQueryFor(item){
 }
 
 const CITY_BANNERS = {
+Planning:{ photo:'japan,travel,landscape', dates:'Apr 17–23' },
   Tokyo:{ photo:'tokyo,shibuya,night,neon', dates:'Nov 28 – Dec 1 · Dec 7 – 8' },
   Osaka:{ photo:'osaka,dotonbori,night', dates:'Dec 1 – 4' },
   Kyoto:{ photo:'kyoto,torii,temple', dates:'Dec 4 – 7' },
@@ -1384,50 +1385,69 @@ const PHOTO_OVERRIDES = {
    ITINERARY — mapped to real dates from your doc
    ========================================================= */
 const ITINERARY = [
-  {date:'Fri, Nov 27', city:'Travel', title:'Depart for Japan', note:'Flights out.', items:[]},
-  {date:'Sat, Nov 28', city:'Tokyo', title:'Arrive + travel day', note:'Land, settle into Tokyo Stay 1.', items:[
-    {name:'Tsukiji Outer Market', tag:'food'}, {name:'Onsen (central Tokyo, near hotel)', tag:'activity'},
-  ], lodging:'Sotetsu Fresa Inn Tokyo Kyobashi (Stay 1, Nov 28 – Dec 1)'},
-  {date:'Sun, Nov 29', city:'Tokyo', title:'Ginza + West Tokyo loop', note:'Harajuku, Shibuya, Shimokitazawa, Shinjuku — all ~10 min apart on the Yamanote line.', items:[
-    {name:'Age.3 GINZA', tag:'food'}, {name:'Harajuku (watch stores)', tag:'shop'},
-    {name:'Shibuya Sky, ramen, listening bars', tag:'activity'}, {name:'Shimokitazawa (thrifting)', tag:'shop'},
-    {name:'Shinjuku — shoe shopping, Golden-Gai bar hopping, anime cafe', tag:'bar'},
-    {name:'JDM car meet — Daikoku PA (evening)', tag:'activity', price:'$150 pp'},
-  ]},
-  {date:'Mon, Nov 30', city:'Tokyo', title:'Excursions', note:'', items:[
-    {name:'teamLab Planets', tag:'activity', price:'$23 pp'},
-    {name:'Asakusa — temple + Sumo Club', tag:'activity', price:'$102 pp'},
-    {name:'Akihabara — anime & gaming, Sando Lab', tag:'shop'},
-    {name:'Mario Kart at night — Shibuya', tag:'activity', price:'$130'},
-    {name:'Bar Centifolia — book 15 days out for a table', tag:'bar'},
-    {name:'Onsen', tag:'activity'},
-  ]},
-  {date:'Tue, Dec 1', city:'Osaka', title:'Travel to Osaka', note:'', items:[
-    {name:'Amerikamura (near the Airbnb)', tag:'activity'}, {name:'Dotonbori', tag:'food'}, {name:'Round 1 Stadium — open til 6am', tag:'bar'},
-  ], lodging:'Airbnb, Nishishinsaibashi (Dec 1 – 4)'},
-  {date:'Wed, Dec 2', city:'Osaka', title:'Kobe day trip + Osaka', note:'', items:[
-    {name:'Dekasan — egg sandwich breakfast', tag:'food'}, {name:'Kobe day trip — hike + beef', tag:'food'},
-    {name:'Osaka Castle', tag:'activity'}, {name:'Okonomiyaki Yukari (Sennichimae)', tag:'food'},
-    {name:'Osaka Aquarium Kaiyukan — closes 8pm', tag:'activity'}, {name:'teamLab Botanical Garden Osaka', tag:'activity'},
-  ]},
-  {date:'Thu, Dec 3', city:'Osaka', title:'Universal Studios Japan', note:'', items:[{name:'Universal Studios Japan', tag:'activity'}]},
-  {date:'Fri, Dec 4', city:'Kyoto', title:'Travel to Kyoto (~30 min)', note:'', items:[
-    {name:'Hozugawa River Boat Ride — 9am–3pm window', tag:'activity', price:'$39'},
-    {name:'AEON MALL KYOTO — closes 9pm', tag:'shop'},
-  ], lodging:'Kyoto lodging TBD (Dec 4 – 7) — shortlisted: Via Inn Prime Kyoto Station, Hachijo Exit'},
-  {date:'Sat, Dec 5', city:'Kyoto', title:'Temple walk + Kimono', note:'Kiyomizu-dera, Sannenzaka, Yasaka Pagoda, Gion, Pontocho all walkable together. Kinkaku-ji is further north.', items:[
-    {name:'Kimono Rental', tag:'activity'}, {name:'Kiyomizu-dera Temple', tag:'activity'},
-    {name:'Sannenzaka → Yasaka Pagoda → Gion → Pontocho', tag:'photo'}, {name:'Kinkaku-ji (Golden Pavilion)', tag:'activity'},
-    {name:'Hikiniku to Come — reservation or walk-up AM', tag:'food'},
-  ]},
-  {date:'Sun, Dec 6', city:'Kyoto', title:'South Kyoto — go early', note:'', items:[
-    {name:'Fushimi Inari Shrine — early', tag:'activity'}, {name:'Arashiyama Bamboo Forest — early', tag:'activity'},
-    {name:'Nishiki Market', tag:'food'},
-  ]},
-  {date:'Mon, Dec 7', city:'Travel', title:'Travel to Nagoya, then Tokyo', note:'', items:[
-    {name:'Ghibli Museum', tag:'activity'},
-  ], lodging:'Tokyo Stay 2 (Dec 7 – 8) — TBD'},
-  {date:'Tue, Dec 8', city:'Travel', title:'Departure', note:'Flights home.', items:[]},
+  {
+    date:'Fri, Apr 16',
+    city:'Travel',
+    title:'Depart for Japan',
+    note:'Flight to Japan.',
+    items:[]
+  },
+  {
+    date:'Sat, Apr 17',
+    city:'Planning',
+    title:'Arrive in Japan',
+    note:'Arrival details and first destination TBD.',
+    items:[]
+  },
+  {
+    date:'Sun, Apr 18',
+    city:'Planning',
+    title:'Open day',
+    note:'City and plans TBD.',
+    items:[]
+  },
+  {
+    date:'Mon, Apr 19',
+    city:'Planning',
+    title:'Open day',
+    note:'City and plans TBD.',
+    items:[]
+  },
+  {
+    date:'Tue, Apr 20',
+    city:'Planning',
+    title:'Open day',
+    note:'City and plans TBD.',
+    items:[]
+  },
+  {
+    date:'Wed, Apr 21',
+    city:'Planning',
+    title:'Open day',
+    note:'City and plans TBD.',
+    items:[]
+  },
+  {
+    date:'Thu, Apr 22',
+    city:'Planning',
+    title:'Open day',
+    note:'City and plans TBD.',
+    items:[]
+  },
+  {
+    date:'Fri, Apr 23',
+    city:'Planning',
+    title:'Open day',
+    note:'Final full day in Japan.',
+    items:[]
+  },
+  {
+    date:'Sat, Apr 24',
+    city:'Travel',
+    title:'Fly home',
+    note:'Departure details TBD.',
+    items:[]
+  },
 ];
 
 /* =========================================================
@@ -1837,8 +1857,8 @@ function bannerHtml(city){
     </div>`;
 }
 
-const TRIP_START = new Date('2026-11-27T00:00:00');
-const TRIP_END = new Date('2026-12-08T23:59:59');
+const TRIP_START = new Date('2027-04-16T00:00:00');
+const TRIP_END = new Date('2027-04-24T23:59:59');
 
 function renderTripStatus(){
   const el = document.getElementById('tripStatus');
